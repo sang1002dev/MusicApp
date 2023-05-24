@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/teal_200">
+    <EditText
+        android:id="@+id/ed_tenbaihat"
+        android:hint="Tên Bài Hát"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custome_listview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <LinearLayout
+        android:id="@+id/ll_player_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ImageButtonReplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/undo_icon" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/previous_icon" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/play_icon" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/next_icon" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:backgroundTint="@color/teal_200"
+            android:src="@drawable/ic_settings" />
+    </LinearLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+        <ImageButton
+            android:id="@+id/btn_start"
+            android:src="@drawable/play_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            />
+        <ImageButton
+            android:id="@+id/btn_pause"
+            android:src="@drawable/pause_icon"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_stop"
+            android:src="@drawable/ic_baseline_cancel_presentation_24"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="50dp"/>
+
+    </RelativeLayout>
+    <TextView
+        android:text=" Bài Hát"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycview"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#03A9F4"/>
+
+
+
+</LinearLayout>
